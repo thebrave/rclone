@@ -4,7 +4,9 @@ version: 2
 jobs:
 
   build:
-    machine: true
+    docker: # run the steps with Docker
+      # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
+      - image: circleci/golang:1.12
 
     working_directory: ~/.go_workspace/src/github.com/rclone/rclone
 
